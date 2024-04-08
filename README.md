@@ -8,5 +8,5 @@ How to use?
 6.run main.py to play the video
 7.when you're done,run purge.py to remove all the frames from the frames folder
 version
-1st version : https://www.youtube.com/watch?v=gRYLbS2LIYg (only video no audio,latency issue)
+1st version : https://www.youtube.com/watch?v=gRYLbS2LIYg (only video no audio + latency issue)(Note: audio in video is edited during post production)
 2nd version : (now with audio and latency issue has been fixed)
