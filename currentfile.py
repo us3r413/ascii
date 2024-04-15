@@ -7,3 +7,5 @@ def fps ():
     return video.get(cv2.CAP_PROP_FPS)
 def frame ():
     return int(video.get(cv2.CAP_PROP_FRAME_COUNT))
+def h ():
+    return 110
