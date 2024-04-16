@@ -14,13 +14,10 @@ def main():
     start_time=time.time()
     pygame.mixer.music.play()
     while(1):
-        #modified after stress test
-        duration=time.time()-start_time
-        k=int(duration*d)
-        #f = open(fr".\frames\frame_{int(duration/spf)}.txt","r")
-        sys.stdout.write('\033[H'+ (open(fr".\frames\frame_{k}.txt","r")).read())
-        #f.close()
-        (open(fr".\frames\frame_{k}.txt","r")).close()
+        k=int((time.time()-start_time)*d)
+        f=open(fr".\frames\frame_{k}.txt","r")
+        sys.stdout.write('\033[H'+ f.read())
+        f.close()
     pygame.mixer.music.unload()
 if __name__ == "__main__":
     main()
