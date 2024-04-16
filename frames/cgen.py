@@ -27,14 +27,17 @@ def main():
                 b,g,r = image_1[y][x]
                 if (number!=0):
                     bl,gl,rl = image_2[y][x]
-                    if ((b==bl)&(g==gl)&(r==rl)&(x!=k-1)):
+                    if ((b==bl)&(g==gl)&(r==rl)):
                         counter+=2
                         continue
-                    if (counter!=0|((x==k-1)&counter!=0)):
+                    elif (counter!=0):
                         frame += f'\033[{counter}C'
                         counter=0
+                        if(x==k-1):
+                            continue
                 frame += f'\033[38;2;{r};{g};{b};48;2;0;0;0mEE'
-            frame+='\n'
+            counter = 0
+            frame+=f'\033[E'
         name = f"frame_{number}.txt"
         with open(name, 'x') as f:
             f.write(frame)
